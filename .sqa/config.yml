@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS:
+      branch: master
+      repo: https://gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS git:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-chocolate-earwig.sh
+        container: qc.acc_woozy-cornflower-raccoon
+  QC.Doc:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-cinnabar-zonkey.sh
+        container: qc.doc_cloudy-cerise-spitz
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS git:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-cobalt-rattlesnake.sh
+        container: qc.doc_gummy-lavender-dodo
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-brass-terrier.sh
+        container: qc.doc_homey-brown-greyhound
+  QC.Lic:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-cardinal-spider.sh
+        container: qc.lic_silly-harlequin-moorhen
+  QC.Sec:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-sapphire-bullfrog.sh
+        container: qc.sec_foggy-zucchini-guppy
+  QC.Sty:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-ivory-moth.sh
+        container: qc.sty_wiggy-mustard-markhor
+  QC.Uni:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-azure-ocelot.sh
+        container: qc.uni_grumpy-scarlet-coral
+  QC.Ver:
+    repos:
+      gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-thistle-hare.sh
+        container: qc.ver_paltry-bronze-cockroach
+timeout: 5400
