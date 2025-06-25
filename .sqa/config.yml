@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS git:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-chocolate-earwig.sh
-        container: qc.acc_woozy-cornflower-raccoon
+        - /usr/bin/env sh .sqa/script.sickly-apricot-monster.sh
+        container: qc.acc_fuzzy-corn-clam
   QC.Doc:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-cinnabar-zonkey.sh
-        container: qc.doc_cloudy-cerise-spitz
+        - /usr/bin/env sh .sqa/script.bumpy-orchid-dollar.sh
+        container: qc.doc_trippy-indigo-barracuda
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS git:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-cobalt-rattlesnake.sh
-        container: qc.doc_gummy-lavender-dodo
+        - /usr/bin/env sh .sqa/script.cloudy-seashell-ladybird.sh
+        container: qc.doc_woozy-eggplant-terrier
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-brass-terrier.sh
-        container: qc.doc_homey-brown-greyhound
+        - /usr/bin/env sh .sqa/script.greasy-green-worm.sh
+        container: qc.doc_scummy-ultramarine-antelope
   QC.Lic:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-cardinal-spider.sh
-        container: qc.lic_silly-harlequin-moorhen
+        - /usr/bin/env sh .sqa/script.paltry-cobalt-capuchin.sh
+        container: qc.lic_cheeky-tangerine-neanderthal
   QC.Sec:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-sapphire-bullfrog.sh
-        container: qc.sec_foggy-zucchini-guppy
+        - /usr/bin/env sh .sqa/script.jumpy-brass-barracuda.sh
+        container: qc.sec_foggy-olive-drever
   QC.Sty:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-ivory-moth.sh
-        container: qc.sty_wiggy-mustard-markhor
+        - /usr/bin/env sh .sqa/script.lumpy-tomato-jellyfish.sh
+        container: qc.sty_gummy-lemon-molly
   QC.Uni:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-azure-ocelot.sh
-        container: qc.uni_grumpy-scarlet-coral
+        - /usr/bin/env sh .sqa/script.homey-champagne-jaguar.sh
+        container: qc.uni_frumpy-eggplant-squirt
   QC.Ver:
     repos:
       gitlab.geo3bcn.csic.es/dtgeo_geo3bcn/dtc-v2/METEO-IFS get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-thistle-hare.sh
-        container: qc.ver_paltry-bronze-cockroach
+        - /usr/bin/env sh .sqa/script.snoopy-indigo-chipmunk.sh
+        container: qc.ver_muggy-asparagus-barracuda
 timeout: 5400
